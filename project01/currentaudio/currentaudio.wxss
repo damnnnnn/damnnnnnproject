@@ -1,0 +1,81 @@
+/* pages/currentaudio/currentaudio.wxss */
+.cview{
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+}
+.titleview{
+  height: 10%;
+  width: 100%;
+  /* background-color: black; */
+  color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-family: 楷体;
+}
+.contentview01{
+  height: 79%;
+  width: 100%;
+  background-color: orange;
+}
+.onecontent{
+  height: 100%;
+  width: 100%;
+  
+}
+.onecell{
+  height: 20%;
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+.onecellzuo{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.onecellzuophoto{
+  height: 100%;
+  width: 80%;
+}
+.onecellyou01{
+  height: 50%;
+  width: 100%;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  font-size: 17px;
+}
+.onecellyou02{
+  height: 50%;
+  width: 100%;
+  display: flex;
+  /* justify-content: center; */
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+}
+/* .contentview02{
+  height: 40%;
+  width: 100%;
+  background-color: black;
+} */
+.bottomview{
+  height: 11%;
+  width: 100%;
+  background-color: black;
+}
+.bottomaudio{
+  /* height: 100%; */
+  /* width: 100%; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}

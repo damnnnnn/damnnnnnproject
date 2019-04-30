@@ -1,0 +1,38 @@
+<!--pages/currentaudio/currentaudio.wxml-->
+<view class='cview'>
+  <view class='titleview'>
+    末世歌者
+  </view>
+
+  <scroll-view scroll-y="true" class='contentview01'>
+    <view class='onecontent'>
+      <block wx:for="{{music}}">
+      <view bindtap='clickone' data-img='{{item.img}}' data-name='{{item.name}}' data-url='{{item.url}}' data-author='{{item.author}}' class='onecell'>
+         <view class='onecellzuo'>
+            <image class='onecellzuophoto' src='{{item.img}}'></image>
+         </view>
+
+         <view class='onecellzuo'>
+            <view class='onecellyou01'>
+             <text>{{item.name}}</text>
+            </view>
+            <view class='onecellyou02'>
+             <text>{{item.author}}</text>
+            </view>
+         </view>
+      </view>
+      </block>
+    </view>
+  </scroll-view>
+
+  <!-- <scroll-view class='contentview02'>
+  
+  </scroll-view> -->
+
+  <view class='bottomview'>
+  <audio id='aa' class='bottomaudio' controls='controls' name='{{name01}}' poster='{{img01}}' src='{{url01}}' author='{{author01}}'>
+  
+  </audio>
+  </view>
+
+</view>
