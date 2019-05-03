@@ -1,0 +1,126 @@
+.cview{
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+}
+/* 标题 */
+.titleview{
+  height: 8%;
+  width: 100%;
+  white-space: nowrap;
+  background-color: white;
+}
+.titlecell{
+  height: 100%;
+  width: 25%;
+  display: inline-block;
+}
+.titletext{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 标题结束 */
+
+/* 轮播图开始 */
+.contentview{
+  height: 92%;
+  width: 100%;
+}
+.xinwenswiper{
+  height: 100%;
+  width: 100%;
+}
+.scrollcontent{
+  height: 100%;
+  width: 100%;
+}
+.content{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.cell{
+  height: 25%;
+  width: 100%;
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cell01{
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.cell01photoview{
+  height: 100%;
+  width: 30%;
+}
+.cell01photoviewtext{
+  height: 100%;
+  width: 60%;
+  font-size: 13px;
+}
+.cell01photoviewtext01{
+  height: 70%;
+  width: 100%;
+  font-size: 13px;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+.cell01photoviewtext02{
+  height: 30%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.cell01photoviewtext02zuo{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}
+.cell01photo{
+  height: 100%;
+  width: 100%;
+}
+.cell02{
+  height: 30%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+.cell02text01{
+  height: 100%;
+  widows: 55%;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cell02text02{
+  height: 100%;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+}
+.cell02text02shang{
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 轮播图结束 */

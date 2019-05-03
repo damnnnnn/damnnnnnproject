@@ -1,0 +1,667 @@
+<view class="cview">
+  <!-- 新闻标题选项卡开始 横向滚动 请求数据-->
+   <scroll-view scroll-x="true" class="titleview">
+     <block a:for="{{xinwentitle}}">
+         <view class="titlecell" data-num="{{index}}" onTap="clickone">
+           <view class="titletext">
+             <text>{{item}}</text>
+           </view>
+         </view>
+     </block>
+   </scroll-view>
+ <!-- 新闻标题选项卡结束 -->
+
+ <!-- 轮播图开始 -->
+   <view class="contentview">
+      <swiper class="xinwenswiper" current="{{xinwenyemian}}">
+          <swiper-item >
+            <scroll-view scroll-y="true" class="scrollcontent">
+              <!-- 每条新闻开始 -->
+             <view class="content">
+               <!-- 有三张图片时 -->
+                <block a:for="{{xinwentoutiao}}">
+                  <block a:if="{{item.thumbnail_pic_s03 !=undefined}}">
+                   <view class="cell">
+                       <view class="cell01">
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s}}"/>
+                           </view>
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s02}}"/>
+                           </view>
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s03}}"/>
+                           </view>
+                       </view>
+                       <view class="cell02">
+                           <view class="cell02text01">
+                                <text>{{item.title}}</text>
+                           </view>
+                           <view class="cell02text02">
+                                <view class="cell02text02shang">
+                                    <text>{{item.author_name}}</text>
+                                </view>
+                                <view class="cell02text02shang">
+                                    <text>{{item.date}}</text>
+                                </view>
+                           </view>
+                       </view>
+                   </view>
+                  </block>
+
+                  <!-- 有一张图片时 -->
+                  <block a:if="{{item.thumbnail_pic_s03==undefined}}">
+                   <view class="cell">
+                       <view class="cell01">
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s}}"/>
+                           </view>
+                           <view class="cell01photoviewtext">
+                             <view class="cell01photoviewtext01">
+                            <text>{{item.title}}</text>
+                            </view>
+                            <view class="cell01photoviewtext02">
+                               <view class="cell01photoviewtext02zuo">
+                                 <text>{{item.author_name}}</text>
+                               </view>
+                               <view class="cell01photoviewtext02zuo">
+                                 <text>{{item.date}}</text>
+                               </view>
+                            </view>
+                           </view>
+                       </view>
+
+                   </view>
+                  </block>
+                </block>
+             </view>
+             <!-- 每条新闻结束 -->
+            </scroll-view>
+          </swiper-item>
+
+          <swiper-item >
+            <scroll-view scroll-y="true" class="scrollcontent">
+              <!-- 每条新闻开始 -->
+             <view class="content">
+               <!-- 有三张图片时 -->
+                <block a:for="{{xinwenshehui}}">
+                  <block a:if="{{item.thumbnail_pic_s03 !=undefined}}">
+                   <view class="cell">
+                       <view class="cell01">
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s}}"/>
+                           </view>
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s02}}"/>
+                           </view>
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s03}}"/>
+                           </view>
+                       </view>
+                       <view class="cell02">
+                           <view class="cell02text01">
+                                <text>{{item.title}}</text>
+                           </view>
+                           <view class="cell02text02">
+                                <view class="cell02text02shang">
+                                    <text>{{item.author_name}}</text>
+                                </view>
+                                <view class="cell02text02shang">
+                                    <text>{{item.date}}</text>
+                                </view>
+                           </view>
+                       </view>
+                   </view>
+                  </block>
+
+                  <!-- 有一张图片时 -->
+                  <block a:if="{{item.thumbnail_pic_s03==undefined}}">
+                   <view class="cell">
+                       <view class="cell01">
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s}}"/>
+                           </view>
+                           <view class="cell01photoviewtext">
+                             <view class="cell01photoviewtext01">
+                            <text>{{item.title}}</text>
+                            </view>
+                            <view class="cell01photoviewtext02">
+                               <view class="cell01photoviewtext02zuo">
+                                 <text>{{item.author_name}}</text>
+                               </view>
+                               <view class="cell01photoviewtext02zuo">
+                                 <text>{{item.date}}</text>
+                               </view>
+                            </view>
+                           </view>
+                       </view>
+
+                   </view>
+                  </block>
+                </block>
+             </view>
+             <!-- 每条新闻结束 -->
+            </scroll-view>
+          </swiper-item>
+
+          <swiper-item >
+            <scroll-view scroll-y="true" class="scrollcontent">
+              <!-- 每条新闻开始 -->
+             <view class="content">
+               <!-- 有三张图片时 -->
+                <block a:for="{{xinwenjunshi}}">
+                  <block a:if="{{item.thumbnail_pic_s03 !=undefined}}">
+                   <view class="cell">
+                       <view class="cell01">
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s}}"/>
+                           </view>
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s02}}"/>
+                           </view>
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s03}}"/>
+                           </view>
+                       </view>
+                       <view class="cell02">
+                           <view class="cell02text01">
+                                <text>{{item.title}}</text>
+                           </view>
+                           <view class="cell02text02">
+                                <view class="cell02text02shang">
+                                    <text>{{item.author_name}}</text>
+                                </view>
+                                <view class="cell02text02shang">
+                                    <text>{{item.date}}</text>
+                                </view>
+                           </view>
+                       </view>
+                   </view>
+                  </block>
+
+                  <!-- 有一张图片时 -->
+                  <block a:if="{{item.thumbnail_pic_s03==undefined}}">
+                   <view class="cell">
+                       <view class="cell01">
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s}}"/>
+                           </view>
+                           <view class="cell01photoviewtext">
+                             <view class="cell01photoviewtext01">
+                            <text>{{item.title}}</text>
+                            </view>
+                            <view class="cell01photoviewtext02">
+                               <view class="cell01photoviewtext02zuo">
+                                 <text>{{item.author_name}}</text>
+                               </view>
+                               <view class="cell01photoviewtext02zuo">
+                                 <text>{{item.date}}</text>
+                               </view>
+                            </view>
+                           </view>
+                       </view>
+
+                   </view>
+                  </block>
+                </block>
+             </view>
+             <!-- 每条新闻结束 -->
+            </scroll-view>
+          </swiper-item>
+
+          <swiper-item >
+            <scroll-view scroll-y="true" class="scrollcontent">
+              <!-- 每条新闻开始 -->
+             <view class="content">
+               <!-- 有三张图片时 -->
+                <block a:for="{{xinwenkeji}}">
+                  <block a:if="{{item.thumbnail_pic_s03 !=undefined}}">
+                   <view class="cell">
+                       <view class="cell01">
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s}}"/>
+                           </view>
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s02}}"/>
+                           </view>
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s03}}"/>
+                           </view>
+                       </view>
+                       <view class="cell02">
+                           <view class="cell02text01">
+                                <text>{{item.title}}</text>
+                           </view>
+                           <view class="cell02text02">
+                                <view class="cell02text02shang">
+                                    <text>{{item.author_name}}</text>
+                                </view>
+                                <view class="cell02text02shang">
+                                    <text>{{item.date}}</text>
+                                </view>
+                           </view>
+                       </view>
+                   </view>
+                  </block>
+
+                  <!-- 有一张图片时 -->
+                  <block a:if="{{item.thumbnail_pic_s03==undefined}}">
+                   <view class="cell">
+                       <view class="cell01">
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s}}"/>
+                           </view>
+                           <view class="cell01photoviewtext">
+                             <view class="cell01photoviewtext01">
+                            <text>{{item.title}}</text>
+                            </view>
+                            <view class="cell01photoviewtext02">
+                               <view class="cell01photoviewtext02zuo">
+                                 <text>{{item.author_name}}</text>
+                               </view>
+                               <view class="cell01photoviewtext02zuo">
+                                 <text>{{item.date}}</text>
+                               </view>
+                            </view>
+                           </view>
+                       </view>
+
+                   </view>
+                  </block>
+                </block>
+             </view>
+             <!-- 每条新闻结束 -->
+            </scroll-view>
+          </swiper-item>
+
+          <swiper-item >
+            <scroll-view scroll-y="true" class="scrollcontent">
+              <!-- 每条新闻开始 -->
+             <view class="content">
+               <!-- 有三张图片时 -->
+                <block a:for="{{xinwenguonei}}">
+                  <block a:if="{{item.thumbnail_pic_s03 !=undefined}}">
+                   <view class="cell">
+                       <view class="cell01">
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s}}"/>
+                           </view>
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s02}}"/>
+                           </view>
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s03}}"/>
+                           </view>
+                       </view>
+                       <view class="cell02">
+                           <view class="cell02text01">
+                                <text>{{item.title}}</text>
+                           </view>
+                           <view class="cell02text02">
+                                <view class="cell02text02shang">
+                                    <text>{{item.author_name}}</text>
+                                </view>
+                                <view class="cell02text02shang">
+                                    <text>{{item.date}}</text>
+                                </view>
+                           </view>
+                       </view>
+                   </view>
+                  </block>
+
+                  <!-- 有一张图片时 -->
+                  <block a:if="{{item.thumbnail_pic_s03==undefined}}">
+                   <view class="cell">
+                       <view class="cell01">
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s}}"/>
+                           </view>
+                           <view class="cell01photoviewtext">
+                             <view class="cell01photoviewtext01">
+                            <text>{{item.title}}</text>
+                            </view>
+                            <view class="cell01photoviewtext02">
+                               <view class="cell01photoviewtext02zuo">
+                                 <text>{{item.author_name}}</text>
+                               </view>
+                               <view class="cell01photoviewtext02zuo">
+                                 <text>{{item.date}}</text>
+                               </view>
+                            </view>
+                           </view>
+                       </view>
+
+                   </view>
+                  </block>
+                </block>
+             </view>
+             <!-- 每条新闻结束 -->
+            </scroll-view>
+          </swiper-item>
+
+          <swiper-item >
+            <scroll-view scroll-y="true" class="scrollcontent">
+              <!-- 每条新闻开始 -->
+             <view class="content">
+               <!-- 有三张图片时 -->
+                <block a:for="{{xinwenguoji}}">
+                  <block a:if="{{item.thumbnail_pic_s03 !=undefined}}">
+                   <view class="cell">
+                       <view class="cell01">
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s}}"/>
+                           </view>
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s02}}"/>
+                           </view>
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s03}}"/>
+                           </view>
+                       </view>
+                       <view class="cell02">
+                           <view class="cell02text01">
+                                <text>{{item.title}}</text>
+                           </view>
+                           <view class="cell02text02">
+                                <view class="cell02text02shang">
+                                    <text>{{item.author_name}}</text>
+                                </view>
+                                <view class="cell02text02shang">
+                                    <text>{{item.date}}</text>
+                                </view>
+                           </view>
+                       </view>
+                   </view>
+                  </block>
+
+                  <!-- 有一张图片时 -->
+                  <block a:if="{{item.thumbnail_pic_s03==undefined}}">
+                   <view class="cell">
+                       <view class="cell01">
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s}}"/>
+                           </view>
+                           <view class="cell01photoviewtext">
+                             <view class="cell01photoviewtext01">
+                            <text>{{item.title}}</text>
+                            </view>
+                            <view class="cell01photoviewtext02">
+                               <view class="cell01photoviewtext02zuo">
+                                 <text>{{item.author_name}}</text>
+                               </view>
+                               <view class="cell01photoviewtext02zuo">
+                                 <text>{{item.date}}</text>
+                               </view>
+                            </view>
+                           </view>
+                       </view>
+
+                   </view>
+                  </block>
+                </block>
+             </view>
+             <!-- 每条新闻结束 -->
+            </scroll-view>
+          </swiper-item>
+
+          <swiper-item >
+            <scroll-view scroll-y="true" class="scrollcontent">
+              <!-- 每条新闻开始 -->
+             <view class="content">
+               <!-- 有三张图片时 -->
+                <block a:for="{{xinwenshishang}}">
+                  <block a:if="{{item.thumbnail_pic_s03 !=undefined}}">
+                   <view class="cell">
+                       <view class="cell01">
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s}}"/>
+                           </view>
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s02}}"/>
+                           </view>
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s03}}"/>
+                           </view>
+                       </view>
+                       <view class="cell02">
+                           <view class="cell02text01">
+                                <text>{{item.title}}</text>
+                           </view>
+                           <view class="cell02text02">
+                                <view class="cell02text02shang">
+                                    <text>{{item.author_name}}</text>
+                                </view>
+                                <view class="cell02text02shang">
+                                    <text>{{item.date}}</text>
+                                </view>
+                           </view>
+                       </view>
+                   </view>
+                  </block>
+
+                  <!-- 有一张图片时 -->
+                  <block a:if="{{item.thumbnail_pic_s03==undefined}}">
+                   <view class="cell">
+                       <view class="cell01">
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s}}"/>
+                           </view>
+                           <view class="cell01photoviewtext">
+                             <view class="cell01photoviewtext01">
+                            <text>{{item.title}}</text>
+                            </view>
+                            <view class="cell01photoviewtext02">
+                               <view class="cell01photoviewtext02zuo">
+                                 <text>{{item.author_name}}</text>
+                               </view>
+                               <view class="cell01photoviewtext02zuo">
+                                 <text>{{item.date}}</text>
+                               </view>
+                            </view>
+                           </view>
+                       </view>
+
+                   </view>
+                  </block>
+                </block>
+             </view>
+             <!-- 每条新闻结束 -->
+            </scroll-view>
+          </swiper-item>
+          <swiper-item >
+            <scroll-view scroll-y="true" class="scrollcontent">
+              <!-- 每条新闻开始 -->
+             <view class="content">
+               <!-- 有三张图片时 -->
+                <block a:for="{{xinwentiyu}}">
+                  <block a:if="{{item.thumbnail_pic_s03 !=undefined}}">
+                   <view class="cell">
+                       <view class="cell01">
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s}}"/>
+                           </view>
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s02}}"/>
+                           </view>
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s03}}"/>
+                           </view>
+                       </view>
+                       <view class="cell02">
+                           <view class="cell02text01">
+                                <text>{{item.title}}</text>
+                           </view>
+                           <view class="cell02text02">
+                                <view class="cell02text02shang">
+                                    <text>{{item.author_name}}</text>
+                                </view>
+                                <view class="cell02text02shang">
+                                    <text>{{item.date}}</text>
+                                </view>
+                           </view>
+                       </view>
+                   </view>
+                  </block>
+
+                  <!-- 有一张图片时 -->
+                  <block a:if="{{item.thumbnail_pic_s03==undefined}}">
+                   <view class="cell">
+                       <view class="cell01">
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s}}"/>
+                           </view>
+                           <view class="cell01photoviewtext">
+                             <view class="cell01photoviewtext01">
+                            <text>{{item.title}}</text>
+                            </view>
+                            <view class="cell01photoviewtext02">
+                               <view class="cell01photoviewtext02zuo">
+                                 <text>{{item.author_name}}</text>
+                               </view>
+                               <view class="cell01photoviewtext02zuo">
+                                 <text>{{item.date}}</text>
+                               </view>
+                            </view>
+                           </view>
+                       </view>
+
+                   </view>
+                  </block>
+                </block>
+             </view>
+             <!-- 每条新闻结束 -->
+            </scroll-view>
+          </swiper-item>
+          <swiper-item >
+            <scroll-view scroll-y="true" class="scrollcontent">
+              <!-- 每条新闻开始 -->
+             <view class="content">
+               <!-- 有三张图片时 -->
+                <block a:for="{{xinwenyule}}">
+                  <block a:if="{{item.thumbnail_pic_s03 !=undefined}}">
+                   <view class="cell">
+                       <view class="cell01">
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s}}"/>
+                           </view>
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s02}}"/>
+                           </view>
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s03}}"/>
+                           </view>
+                       </view>
+                       <view class="cell02">
+                           <view class="cell02text01">
+                                <text>{{item.title}}</text>
+                           </view>
+                           <view class="cell02text02">
+                                <view class="cell02text02shang">
+                                    <text>{{item.author_name}}</text>
+                                </view>
+                                <view class="cell02text02shang">
+                                    <text>{{item.date}}</text>
+                                </view>
+                           </view>
+                       </view>
+                   </view>
+                  </block>
+
+                  <!-- 有一张图片时 -->
+                  <block a:if="{{item.thumbnail_pic_s03==undefined}}">
+                   <view class="cell">
+                       <view class="cell01">
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s}}"/>
+                           </view>
+                           <view class="cell01photoviewtext">
+                             <view class="cell01photoviewtext01">
+                            <text>{{item.title}}</text>
+                            </view>
+                            <view class="cell01photoviewtext02">
+                               <view class="cell01photoviewtext02zuo">
+                                 <text>{{item.author_name}}</text>
+                               </view>
+                               <view class="cell01photoviewtext02zuo">
+                                 <text>{{item.date}}</text>
+                               </view>
+                            </view>
+                           </view>
+                       </view>
+
+                   </view>
+                  </block>
+                </block>
+             </view>
+             <!-- 每条新闻结束 -->
+            </scroll-view>
+          </swiper-item>
+          <swiper-item >
+            <scroll-view scroll-y="true" class="scrollcontent">
+              <!-- 每条新闻开始 -->
+             <view class="content">
+               <!-- 有三张图片时 -->
+                <block a:for="{{xinwencaijing}}">
+                  <block a:if="{{item.thumbnail_pic_s03 !=undefined}}">
+                   <view class="cell">
+                       <view class="cell01">
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s}}"/>
+                           </view>
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s02}}"/>
+                           </view>
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s03}}"/>
+                           </view>
+                       </view>
+                       <view class="cell02">
+                           <view class="cell02text01">
+                                <text>{{item.title}}</text>
+                           </view>
+                           <view class="cell02text02">
+                                <view class="cell02text02shang">
+                                    <text>{{item.author_name}}</text>
+                                </view>
+                                <view class="cell02text02shang">
+                                    <text>{{item.date}}</text>
+                                </view>
+                           </view>
+                       </view>
+                   </view>
+                  </block>
+
+                  <!-- 有一张图片时 -->
+                  <block a:if="{{item.thumbnail_pic_s03==undefined}}">
+                   <view class="cell">
+                       <view class="cell01">
+                           <view class="cell01photoview">
+                               <image class="cell01photo" src="{{item.thumbnail_pic_s}}"/>
+                           </view>
+                           <view class="cell01photoviewtext">
+                             <view class="cell01photoviewtext01">
+                            <text>{{item.title}}</text>
+                            </view>
+                            <view class="cell01photoviewtext02">
+                               <view class="cell01photoviewtext02zuo">
+                                 <text>{{item.author_name}}</text>
+                               </view>
+                               <view class="cell01photoviewtext02zuo">
+                                 <text>{{item.date}}</text>
+                               </view>
+                            </view>
+                           </view>
+                       </view>
+
+                   </view>
+                  </block>
+                </block>
+             </view>
+             <!-- 每条新闻结束 -->
+            </scroll-view>
+          </swiper-item>
+      </swiper>
+
+   </view>
+ <!-- 轮播图结束 -->
+</view>
