@@ -1,0 +1,17 @@
+<view class="cview">
+  <swiper class="swiper" >
+    <block a:for="{{yindaoye}}">
+      <swiper-item >
+        <view class="cell">
+          <image class="img" src="{{item}}"/>
+          <block a:if="{{index==yindaoye.length-1}}">
+          <view class="cellcell" onTap="clickone">
+            <text>按下任意键</text>
+          </view>
+        </block>
+        </view>
+        
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
