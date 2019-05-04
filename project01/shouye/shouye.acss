@@ -1,0 +1,158 @@
+.cview{
+  height: 100vh;
+  width: 100%;
+}
+/* 标题 */
+.titleview{
+  height: 8.55%;
+  width: 100%;
+  /* background-color: black; */
+  position: fixed;
+}
+.audio{
+  height: 100%;
+  width: 100%;
+}
+/* 标题结束 */
+
+
+/* 轮播图 */
+.swiperview{
+  height: 25%;
+  width: 100%;
+  background-color: black;
+}
+.swipercell{
+  height: 100%;
+  width: 100%;
+}
+/* 轮播图结束 */
+
+
+/* 内容标题 */
+.contenttitleview{
+  height: 6.45%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: black; */
+}
+.shouyeselectview{
+  height: 100%;
+  width: 33.33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.on{
+  color: orangered;
+}
+/* 内容标题结束 */
+
+
+/* 正文 */
+.contentview{
+  height: 55%;
+  width: 100%;
+  /* background-color: red; */
+}
+.contentswiper{
+  height: 100%;
+  width: 100%;
+}
+.swipercontentview01{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* align-items: center;
+  justify-content: center; */
+}
+.swipercontentview01cell{
+  height: 30%;
+  width: 96%;
+  /* border: 1px solid 	#CDCDB4; */
+  display: flex;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 2%;
+  margin-right: 2%;
+  box-shadow: 5px 5px 5px;
+}
+.yinyuecell{
+  height: 100%;
+  width: 50%;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.yinyuephoto{
+  height: 85%;
+  width: 70%;
+  border-radius: 10%;
+
+  /* background-color: red; */
+}
+.yinyuephotocell{
+  height: 100%;
+  width: 100%;
+  border-radius: 10%;
+}
+.yinyuecell02{
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.jiugonggecell{
+  height: 30%;
+  width: 30%;
+  border-radius: 50%;
+  /* border: 1px solid black; */
+  margin: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 10px gray;
+}
+/* .jiugonggecellphoto{
+  height: 70%;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+.jiugonggecellphotoview{
+  height: 50%;
+  width: 50%;
+}
+.saoyisao{
+  height: 20%;
+  width: 20%;
+  box-shadow: 10px 10px 10px;
+  border-left: 1px solid #CDCDB4;
+  border-top: 1px solid #CDCDB4;
+  /* background-color: black; */
+}
+.saoyisaoview{
+  height: 100%;
+  width: 100%;
+}
+/* 正文结束 */
+
+
+/* 底部菜单 */
+.bottomview{
+  height: 5%;
+  width: 100%;
+  /* background-color: blue; */
+}
+/* 底部菜单结束 */
+

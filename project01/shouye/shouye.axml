@@ -1,0 +1,91 @@
+<view class="cview">
+ <!-- 底部菜单 -->
+   <view class="bottomview">
+
+   </view>
+<!-- 轮播图 -->
+   <view class="swiperview">
+       <swiper autoplay="{{true}}" indicator-dots="{{true}}" interval="{{3500}}" duration="{{1000}}" circular="{{true}}">
+         <block a:for="{{shouye}}">
+           <swiper-item >
+              <view class="swipercell">
+                <image class="swipercell" src="{{item}}"/>
+              </view>
+           </swiper-item>
+         </block>
+       </swiper>
+   </view>
+<!-- 正文标题 -->
+   <view class="contenttitleview">
+      <block a:for="{{shouyeselect}}">
+          <view class="shouyeselectview {{num==index ? 'on':'' }}" data-num="{{index}}" onTap="clickone">
+               <text>{{item}}</text>
+          </view>
+      </block>
+   </view>
+<!-- 正文 -->
+   <view class="contentview">
+      <swiper class="contentswiper" current="{{currentyemian}}" >
+        <!-- 音乐列表 -->
+          <swiper-item >
+            <scroll-view scroll-y="{{true}}" class="swipercontentview01">
+                <view class="swipercontentview01">
+                  <block a:for="{{music}}">
+                    <view class="swipercontentview01cell" data-author="{{item.author}}" data-name="{{item.name}}" data-img="{{item.img}}" data-url="{{item.url}}" onTap="clicktwo">
+                         <view class="yinyuecell">
+                            <view class="yinyuephoto">
+                                <image class="yinyuephotocell" src="{{item.img}}"/>
+                            </view>
+                         </view>
+
+                         <view class="yinyuecell">
+                             <view class="yinyuecell02">
+                                <text>{{item.name}}</text>
+                             </view>
+
+                             <view class="yinyuecell02">
+                                <text>{{item.author}}</text>
+                             </view>
+                         </view>
+                    </view>
+                  </block>
+                </view>
+            </scroll-view>
+          </swiper-item>
+
+        <!-- 功能菜单 -->
+          <swiper-item >
+            <scroll-view scroll-y="{{true}}" class="swipercontentview01">
+                <view class="swipercontentview01">
+                  <block a:for="{{jiugongge}}">
+                     <view class="jiugonggecell" data-jiugonggeid="{{index}}" onTap="clickthree">
+                       <image class="jiugonggecellphotoview" src="{{item.img}}"/>
+                       <text>{{item.name}}</text>
+
+                       <view class="jiugonggetext"> 
+
+                       </view>
+
+                     </view>
+                  </block>
+                </view>
+            </scroll-view>
+          </swiper-item>
+        <!-- 扫一扫 -->
+          <swiper-item >
+             <view class="swipercontentview01">
+                <view class="saoyisao" onTap="clickfour">
+                    <image class="saoyisaoview" src="http://damnnnnn.natapp1.cc/images/scanning.png"/>
+                </view>
+             </view>
+          </swiper-item>
+
+        </block>
+      </swiper>
+   </view>
+    <!-- 标题音乐 -->
+   <view class="titleview">
+     <audio id="ad" class="audio" poster="{{img}}" author="{{author}}" name="{{name}}" src="{{url}}" controls loop></audio>
+   </view>
+
+</view>
