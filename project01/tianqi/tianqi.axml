@@ -1,0 +1,114 @@
+<view class="cview">
+   <view class="titleview">
+      <input onInput="input" class="title" placeholder="请输入城市名" />
+      <image onTap="clickone" class="img" src="http://damnnnnn.natapp1.cc/images/sousuo.png"/>
+   </view>
+
+   <view class="contentview">
+      <!-- <view class="content"> -->
+          <view class="contentzuo">
+             <image class="contentzuophoto" src="{{image01}}"/>
+             <view class="contentzuotext">{{result.future[0].weather}}</view>
+          </view>
+          <view class="contentyou">
+              <text>{{result.today.date_y}}</text>
+              <text>{{result.future[0].temperature}}</text>
+              <text>{{result.future[0].week}}</text>
+              <text>{{result.future[0].wind}}</text>
+              <text>{{result.today.dressing_advice}}</text>
+          </view>
+      <!-- </view> -->
+   </view>
+
+   <scroll-view scroll-y="{{true}}" class="bodyview">
+      <view class="body">
+         <block a:for="{{future}}">
+             <block a:if="{{index==0}}"></block>
+             <block a:if="{{index==1}}">
+               <view class="bodycell">
+                  <view class="futurephotoview">
+                     <image class="futurephoto" src="{{image02}}"/>
+                  </view>
+                  <view class="futuretext">
+                     <text>{{item.date}}</text>
+                     <text>{{item.temperature}}</text>
+                     <text>{{item.weather}}</text>
+                     <text>{{item.week}}</text>
+                     <text>{{item.wind}}</text>
+                  </view>
+               </view>
+             </block>
+             <block a:if="{{index==2}}">
+               <view class="bodycell">
+                  <view class="futurephotoview">
+                     <image class="futurephoto" src="{{image03}}"/>
+                  </view>
+                  <view class="futuretext">
+                     <text>{{item.date}}</text>
+                     <text>{{item.temperature}}</text>
+                     <text>{{item.weather}}</text>
+                     <text>{{item.week}}</text>
+                     <text>{{item.wind}}</text>
+                  </view>
+               </view>
+             </block>
+             <block a:if="{{index==3}}">
+               <view class="bodycell">
+                  <view class="futurephotoview">
+                     <image class="futurephoto" src="{{image04}}"/>
+                  </view>
+                  <view class="futuretext">
+                     <text>{{item.date}}</text>
+                     <text>{{item.temperature}}</text>
+                     <text>{{item.weather}}</text>
+                     <text>{{item.week}}</text>
+                     <text>{{item.wind}}</text>
+                  </view>
+               </view>
+             </block>
+             <block a:if="{{index==4}}">
+               <view class="bodycell">
+                  <view class="futurephotoview">
+                     <image class="futurephoto" src="{{image05}}"/>
+                  </view>
+                  <view class="futuretext">
+                     <text>{{item.date}}</text>
+                     <text>{{item.temperature}}</text>
+                     <text>{{item.weather}}</text>
+                     <text>{{item.week}}</text>
+                     <text>{{item.wind}}</text>
+                  </view>
+               </view>
+             </block>
+             <block a:if="{{index==5}}">
+               <view class="bodycell">
+                  <view class="futurephotoview">
+                     <image class="futurephoto" src="{{image06}}"/>
+                  </view>
+                  <view class="futuretext">
+                     <text>{{item.date}}</text>
+                     <text>{{item.temperature}}</text>
+                     <text>{{item.weather}}</text>
+                     <text>{{item.week}}</text>
+                     <text>{{item.wind}}</text>
+                  </view>
+               </view>
+             </block>
+             <block a:if="{{index==6}}">
+               <view class="bodycell">
+                  <view class="futurephotoview">
+                     <image class="futurephoto" src="{{image07}}"/>
+                  </view>
+                  <view class="futuretext">
+                     <text>{{item.date}}</text>
+                     <text>{{item.temperature}}</text>
+                     <text>{{item.weather}}</text>
+                     <text>{{item.week}}</text>
+                     <text>{{item.wind}}</text>
+                  </view>
+               </view>
+             </block>
+         </block>
+      </view>
+   </scroll-view>
+</view>
