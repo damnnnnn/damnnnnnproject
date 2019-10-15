@@ -1,0 +1,16 @@
+1|查询员工|queryemp|1|queryemp.html|
+2|增加员工|addemp|1|addemp.html|
+3|更新密码|updateemp|1|updateemp.html|
+4|统计员工|countemp|1|countemp.html|
+5|查询部门|querydepts|2|querydepts.html|
+6|增加部门|adddepts|2|adddepts.html|
+7|更新部门|updatedepts|2|updatedepts.html|
+8|统计部门|countdepts|2|countdepts.html|
+9|维护角色|modifyrole|3|modifyrole.html|
+10|微信登录|loginwx|4|loginwx.html|
+11|微信消息|wxmessage|4|wxmessage.html|
+12|权限配置|checkconfig|5|checkconfig.html|
+13|笑话大全|aa|6|aa.html|
+14|交通出行|bb|6|bb.html|
+15|星座心愿|cc|6|cc.html|
+16|算命运势|dd|6|dd.html|

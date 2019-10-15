@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Insert title here</title>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<center>
+  <input type="text"  id="username"  placeholder="请输入用户姓名:"/><p/>
+ <input type="password"  id="userpwd"  placeholder="请输入用户密码:"/><p/>
+ <input type="button" id="loginbtn"  value="用户登录"/>
+</center>
+</body>
+<script type="text/javascript">
+
+    $("#loginbtn").click(function(){
+    	
+    	var uname=$("#username").val();
+    	var upwd=$("#userpwd").val();
+    	
+    	console.log(uname+"\t"+upwd);
+    	
+    	$.ajax({
+    		type:"post",
+    		url:"http://127.0.0.1:8112/users/login",
+    		data:{"uname":uname,"upwd":upwd},
+    		dataType:'json',
+    		success:function(datas)
+    		{
+    			console.log(datas);
+    			
+    			if(datas.logindata=="success")
+    			{ 
+    				console.log("结果是登录成功");
+    				
+    				//页面临时缓存
+    				localStorage.setItem("jwt",datas.jwt);
+    				
+    				window.location.href="/usermain";
+    				
+    			}
+    		}
+    		
+    		
+    	});
+    	
+    });
+</script>
+</html>

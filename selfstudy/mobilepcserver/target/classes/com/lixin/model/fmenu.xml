@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC 
+    "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="fmenudao">
+
+
+          <insert id="batchfmenudatas">
+               begin
+             
+               <foreach collection="list" item="fmenu" separator="">
+                    insert  into  t_fmenu(fid,fname,ctime)  values   (#{fmenu.fid},#{fmenu.fname},sysdate);
+               </foreach>
+               commit;
+               end;
+          
+          </insert>
+          
+          
+          <select id="queryfmenu"  resultType="com.lixin.model.FMenu">
+            select  * from  t_fmenu
+          </select>
+    
+ 
+           <select  id="querygridmenu"  resultType="com.lixin.model.GridMenu">
+             select  *  from   t_gridmenu
+           </select>
+
+</mapper>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+	</head>
+	<body>
+		<div  id="regiview">
+			
+		 <input  type="text" name="uname" v-model="namevalue"  v-on:blur.lazy='checkName()' /><p  v-html="showmsg"></p>
+			
+		</div>
+	</body>
+	<script  type="text/javascript">
+		
+		var  app = new Vue({
+			el:"#regiview",
+			data:{
+				namevalue:"",
+				showmsg:""
+				
+			},
+			methods:{
+				
+				checkName:function()
+				{
+					var  that =this;
+					
+					console.log("失去焦点事件"+that.namevalue);
+					
+					var name=this.namevalue;
+					
+					$.post("http://127.0.0.1:9100/users/checkusername",
+					{"name":name},function(datas){
+						
+						console.log("-->"+datas);
+						if(datas=="success")
+						{
+							
+							
+							that.showmsg="<span  style='color:green;'>恭喜用户名可以使用</span>";
+						}
+						else
+						{
+							that.showmsg="<span  style='color:red;'>对不起改用户名不能使用</span>";
+						}
+						
+					},"json");
+					
+				}
+				
+			}
+			
+		});
+		
+	</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	</head>
+	<body>
+		<div id="leftmenu">
+			
+		  <ul>
+		  	<li  v-for="m  in  menus">
+		  	<a  v-bind:href="m.url">{{m.site}}</a>
+		  	</li>
+		  	
+		  </ul>
+			
+		</div>
+	</body>
+		<script  type="text/javascript">
+		
+		var app =  new Vue({
+			
+			el:"#leftmenu",
+			data:{
+				
+				menus:[{site:"搜狐",url:"http://www.sohu.com"},
+				{site:"淘宝",url:"http://www.taobao.com"},
+				{site:"凤凰",url:"http://www.ifeng.com"}]
+			}
+			
+		});
+		
+	</script>
+</html>

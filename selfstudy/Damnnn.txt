@@ -1,0 +1,14 @@
+e486502a7af6d32a    ngrok
+gdirmrqdmwuobabf
+bgfvojhdjrtgibfe
+jxwdngwrraykjejf
+mgldfobwipebiibe
+lzpeeuedqppffhjb
+1029774038230
+
+memcacheª∫¥Ê“¿¿µ
+<dependency>
+    <groupId>net.spy</groupId>
+    <artifactId>spymemcached</artifactId>
+    <version>2.10.3</version>
+</dependency>

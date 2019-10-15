@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC 
+    "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cmenudao">
+
+
+          <insert id="batchcmenudatas">
+               begin
+             
+               <foreach collection="list" item="cmenu" separator="">
+                    insert  into  t_cmenu(cid,cname,curl,cfid,cctime,mobileview)  values
+                    (#{cmenu.cid},#{cmenu.cname},#{cmenu.curl},#{cmenu.cfid},sysdate,#{cmenu.mobileview});
+               </foreach>
+               commit;
+               end;
+          
+          </insert>
+          
+          <select id="querycmenybyid" parameterType="int"  resultType="com.lixin.model.CMenu">
+                  select  * from  t_cmenu  c  where  cfid=#{id}
+          </select>
+    
+ 
+
+
+</mapper>

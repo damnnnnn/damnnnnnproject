@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC 
+    "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.thzm.lixin.bootupload.dao.IUserDao">
+ 
+ 
+ 	<insert id="batchUserInfo" useGeneratedKeys="false" parameterType="list">
+         begin
+		<foreach collection="list" item="userinfo" separator="">
+			insert into t_userinfo(id,uname,upwd,usex,ubirthday,uaddress,ustate,did,faceimg,phone) 
+			values(dept_seq.nextval,#{userinfo.uname},#{userinfo.upwd},
+			#{userinfo.usex},to_date(#{userinfo.ubirthday},'yyyy-MM-dd'),#{userinfo.uaddress},
+			#{userinfo.ustate},#{userinfo.did},#{userinfo.faceimg},#{userinfo.phone});
+			
+		</foreach>
+		commit;
+		
+		end;
+	</insert>
+    
+    
+
+	      
+
+</mapper>

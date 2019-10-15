@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	</head>
+	<body>
+		<div id="leftmenu">
+			
+			<ul  >
+				<li v-for="  m  in menus">{{m}}</li>
+			</ul>
+			
+		</div>
+	</body>
+	<script  type="text/javascript">
+		
+		var app =  new Vue({
+			
+			el:"#leftmenu",
+			data:{
+				
+				menus:["公共服务","生活服务","游戏服务","美食服务"]
+			}
+			
+		});
+		
+	</script>
+</html>

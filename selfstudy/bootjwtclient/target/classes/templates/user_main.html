@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Insert title here</title>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<button  id="querymoney">查询公司的利润</button>
+<button  id="queryaddress">查询公司的地址</button>
+</body>
+<script type="text/javascript">
+   $("#querymoney").click(function(){
+	   
+	   var  token=localStorage.getItem("jwt");
+	   console.log(token);
+	   $.ajax({
+   		type:"post",
+   		url:"http://127.0.0.1:8112/users/querymoney",
+   		headers:{"Authorization":token},
+   		dataType:'json',
+   		success:function(datas)
+   		{
+   			console.log(datas);
+   			
+   		
+   		}
+   		
+   		
+   	});
+   });
+   
+   
+   $("#queryaddress").click(function(){
+	   
+
+	
+	   $.ajax({
+   		type:"post",
+   		url:"http://127.0.0.1:8112/users/selectaddress",
+   		dataType:'json',
+   		success:function(datas)
+   		{
+   			console.log(datas);
+   			
+   		
+   		}
+   		
+   		
+   	});
+   });
+</script>
+</html>

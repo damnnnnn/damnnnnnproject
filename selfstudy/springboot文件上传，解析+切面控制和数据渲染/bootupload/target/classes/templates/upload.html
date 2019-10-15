@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Insert title here</title>
+</head>
+<body>
+<h1>文件上传[批量开户]</h1>
+<form action="upload" method="post"  enctype="multipart/form-data">
+ <input type="file"  name="sfile"/><p/>
+ <input type="submit" value="上传文件"/> <p/>
+ <span>提醒：只能上传文件是.txt文件</span><p/>
+ <span  th:text="${fileinfo}"></span>
+</form>
+</body>
+</html>

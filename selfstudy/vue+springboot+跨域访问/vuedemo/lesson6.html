@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	</head>
+	<body>
+		<div  id="datasview">
+			<table  border="1">
+				<tr  v-for="emp in emps">
+					<td>{{emp.id}}</td>
+					<td>{{emp.name}}</td>
+					<td>{{emp.age}}</td>
+				</tr>
+				
+			</table>
+			
+		</div>
+	</body>
+	<script  type="text/javascript">
+		var  app =  new Vue({
+			el:'#datasview',
+			data:{
+				
+				emps:[{"id":10,"name":"梁晓琪",age:18},
+				{"id":11,"name":"万慧琴",age:18},
+				{"id":12,"name":"赵玉斌",age:16}]
+			}
+			
+		});
+		
+	</script>
+</html>
